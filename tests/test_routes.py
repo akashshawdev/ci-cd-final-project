@@ -10,8 +10,8 @@ class TestRoutes(unittest.TestCase):
 
     def setUp(self):
         """Set up test client"""
+        app.config["TESTING"] = True
         self.client = app.test_client()
-        self.client.testing = True
 
     def test_index(self):
         """Test root endpoint returns 200"""
